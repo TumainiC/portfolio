@@ -1111,19 +1111,17 @@
 
       <article class="proj span-5">
         <div class="pnum">/02</div>
-        <div class="visual v-trocr">
-          <div class="doc">
-            <div class="scan"></div>
-          </div>
+        <div class="visual" style="background:var(--paper); padding:0; display:flex; align-items:center; justify-content:center;">
+          <img src="assets/trocr-pipeline.svg" width="100%" alt="TrOCR 3-stage pipeline architecture diagram" />
         </div>
         <h3>TrOCR <span class="it">fine-tuning pipeline</span></h3>
-        <p class="blurb">20K+ historical documents, student-teacher distillation, end-to-end on GCP. The pipeline that taught a model to read handwriting it had never seen.</p>
+        <p class="blurb">A modular 3-stage document intelligence pipeline: layout detection (CRAFT/DBNet) to find text regions, fine-tuned TrOCR (LoRA, r=16) to transcribe them, and an LLM post-processing layer for structured JSON extraction. Trained on 20K+ historical documents on GCP. The key architectural decision was keeping each stage scoped to one problem — no single model doing everything.</p>
         <div class="stack">
-          <span>TrOCR</span><span>HuggingFace</span><span>GCP</span><span>PyTorch</span>
+          <span>TrOCR</span><span>LoRA</span><span>GCP</span><span>PyTorch</span><span>HuggingFace</span>
         </div>
         <div class="meta">
           <span>2025 · research</span>
-          <a href="#">case study →</a>
+          <span style="color:var(--ink-soft); cursor:default;">NDA-protected · reference available →</span>
         </div>
       </article>
 
